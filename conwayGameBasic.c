@@ -325,8 +325,8 @@ void drawStatusBar(struct abuf * ab, gameOfLife * this) {
     abAppend(ab, status, len);
     abAppend(ab, "\x1b[K\r\n", 5);
 
-    char inst[80];
-    len = snprintf(inst, sizeof(inst), "Space: Draw/Erase | Ctrl-Q: Quit | Ctrl-R: Reset | Ctrl-S/L : Save/Load State");
+    char inst[150];
+    len = snprintf(inst, sizeof(inst), "Space: Draw/Erase | F6: Step | F5: Continue| Ctrl-Q: Quit | Ctrl-R: Reset | Ctrl-S/L : Save/Load State");
     abAppend(ab, inst, len);
 
     abAppend(ab, "\x1b[K\x1b[m", 6);
